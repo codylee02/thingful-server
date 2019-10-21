@@ -1,0 +1,36 @@
+2019-10-21 08:21:44.154 MDT [1133] LOG:  listening on IPv6 address "::1", port 5432
+2019-10-21 08:21:44.154 MDT [1133] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2019-10-21 08:21:44.155 MDT [1133] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2019-10-21 08:21:44.230 MDT [1134] LOG:  database system was shut down at 2019-10-18 18:13:49 MDT
+2019-10-21 08:21:44.287 MDT [1133] LOG:  database system is ready to accept connections
+2019-10-21 08:21:49.313 MDT [1155] FATAL:  role "thingful" does not exist
+2019-10-21 08:21:49.315 MDT [1156] FATAL:  role "thingful" does not exist
+2019-10-21 08:23:11.545 MDT [1177] ERROR:  syntax error at or near "createuser" at character 1
+2019-10-21 08:23:11.545 MDT [1177] STATEMENT:  createuser -sPE thingful
+	;
+2019-10-21 08:24:26.810 MDT [1257] FATAL:  role "thingful" is not permitted to log in
+2019-10-21 08:24:26.811 MDT [1258] FATAL:  role "thingful" is not permitted to log in
+2019-10-21 09:22:07.174 MDT [2599] ERROR:  relation "schemaversion" does not exist at character 39
+2019-10-21 09:22:07.174 MDT [2599] STATEMENT:  
+	        SELECT version 
+	        FROM schemaversion 
+	        ORDER BY version DESC 
+	        LIMIT 1
+2019-10-21 09:23:47.022 MDT [2683] ERROR:  relation "thingful_things" does not exist
+2019-10-21 09:23:47.022 MDT [2683] STATEMENT:  TRUNCATE
+	      thingful_things,
+	      thingful_users,
+	      thingful_reviews
+	      RESTART IDENTITY CASCADE
+2019-10-21 09:23:47.036 MDT [2684] ERROR:  relation "thingful_things" does not exist
+2019-10-21 09:23:47.036 MDT [2684] STATEMENT:  TRUNCATE
+	      thingful_things,
+	      thingful_users,
+	      thingful_reviews
+	      RESTART IDENTITY CASCADE
+2019-10-21 09:24:06.044 MDT [2702] ERROR:  relation "schemaversion" does not exist at character 39
+2019-10-21 09:24:06.044 MDT [2702] STATEMENT:  
+	        SELECT version 
+	        FROM schemaversion 
+	        ORDER BY version DESC 
+	        LIMIT 1
