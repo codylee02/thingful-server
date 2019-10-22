@@ -1,3 +1,4 @@
+const bcrypt = require("bcryptjs");
 function makeUsersArray() {
   return [
     {
@@ -220,6 +221,22 @@ function makeThingsFixtures() {
   return { testUsers, testThings, testReviews };
 }
 
+function seedUsers(db, users) {
+  const preppedUsers = users.map(user => ({
+    ...user,
+    password: bcrypt.hashSync(user.password, 1)
+  }));
+  return db
+    .into("thingful_users")
+    .insert(preppedUsers)
+    .then(() =>
+      // update the auto sequence to stay in sync
+      db.raw(`SELECT setval('thingful_users_id_seq', ?)`, [
+        users[users.length - 1].id
+      ])
+    );
+}
+
 function cleanTables(db) {
   return db.raw(
     `TRUNCATE
@@ -231,18 +248,37 @@ function cleanTables(db) {
 }
 
 function seedThingsTables(db, users, things, reviews = []) {
-  return db
-    .into("thingful_users")
-    .insert(users)
-    .then(() => db.into("thingful_things").insert(things))
-    .then(() => reviews.length && db.into("thingful_reviews").insert(reviews));
+  return db.transaction(async trx => {
+    await seedUsers(trx, users);
+    await trx.into("thingful_things").insert(things);
+    //update the auto sequence to match the forced id values
+    await trx.raw(`SELECT setval('thingful_things_id_seq', ?)`, [
+      things[things.length - 1].id
+    ]);
+    //only insert reviews if there are some, also update the sequence counter
+    if (reviews.length) {
+      await trx.into("thingful_reviews").insert(reviews);
+      await trx.raw(`SELECT setval('thingful_reviews_id_seq', ?)`, [
+        reviews[reviews.length - 1].id
+      ]);
+    }
+  });
+
+  //  return db
+
+  //     .into("thingful_users")
+  //     .insert(users)
+  //     .then(() => db.into("thingful_things").insert(things))
+  //     .then(() => reviews.length && db.into("thingful_reviews").insert(reviews));
 }
 
 function seedMaliciousThing(db, user, thing) {
-  return db
-    .into("thingful_users")
-    .insert([user])
-    .then(() => db.into("thingful_things").insert([thing]));
+  return seedUsers(db, [user]).then(() =>
+    db.into("thingful_things").insert([thing])
+  );
+  // .into("thingful_users")
+  // .insert([user])
+  // .then(() => db.into("thingful_things").insert([thing]));
 }
 
 function makeAuthHeader(user) {
@@ -264,5 +300,6 @@ module.exports = {
   cleanTables,
   seedThingsTables,
   seedMaliciousThing,
-  makeAuthHeader
+  makeAuthHeader,
+  seedUsers
 };

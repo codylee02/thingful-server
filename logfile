@@ -34,3 +34,44 @@
 	        FROM schemaversion 
 	        ORDER BY version DESC 
 	        LIMIT 1
+2019-10-22 11:32:49.105 MDT [26819] FATAL:  database "thingful-f" does not exist
+2019-10-22 11:34:26.311 MDT [26856] FATAL:  database "thingful-f" does not exist
+2019-10-22 11:55:58.958 MDT [27366] ERROR:  column "content" of relation "thingful_users" does not exist at character 31
+2019-10-22 11:55:58.958 MDT [27366] STATEMENT:  insert into "thingful_users" ("content", "date_created", "id", "image", "title", "user_id") values ($1, $2, $3, $4, $5, $6), ($7, $8, $9, $10, $11, $12), ($13, $14, $15, $16, $17, $18), ($19, $20, $21, $22, $23, $24)
+2019-10-22 11:55:59.268 MDT [27367] ERROR:  column "content" of relation "thingful_users" does not exist at character 31
+2019-10-22 11:55:59.268 MDT [27367] STATEMENT:  insert into "thingful_users" ("content", "date_created", "id", "image", "title", "user_id") values ($1, $2, $3, $4, $5, $6), ($7, $8, $9, $10, $11, $12), ($13, $14, $15, $16, $17, $18), ($19, $20, $21, $22, $23, $24)
+2019-10-22 11:55:59.593 MDT [27368] ERROR:  column "content" of relation "thingful_users" does not exist at character 31
+2019-10-22 11:55:59.593 MDT [27368] STATEMENT:  insert into "thingful_users" ("content", "date_created", "id", "image", "title", "user_id") values ($1, $2, $3, $4, $5, $6), ($7, $8, $9, $10, $11, $12), ($13, $14, $15, $16, $17, $18), ($19, $20, $21, $22, $23, $24)
+2019-10-22 11:56:00.249 MDT [27368] ERROR:  column "content" of relation "thingful_users" does not exist at character 31
+2019-10-22 11:56:00.249 MDT [27368] STATEMENT:  insert into "thingful_users" ("content", "date_created", "id", "image", "title", "user_id") values ($1, $2, $3, $4, $5, $6), ($7, $8, $9, $10, $11, $12), ($13, $14, $15, $16, $17, $18), ($19, $20, $21, $22, $23, $24)
+2019-10-22 11:56:00.891 MDT [27368] ERROR:  column "content" of relation "thingful_users" does not exist at character 31
+2019-10-22 11:56:00.891 MDT [27368] STATEMENT:  insert into "thingful_users" ("content", "date_created", "id", "image", "title", "user_id") values ($1, $2, $3, $4, $5, $6), ($7, $8, $9, $10, $11, $12), ($13, $14, $15, $16, $17, $18), ($19, $20, $21, $22, $23, $24)
+2019-10-22 11:56:47.921 MDT [27405] ERROR:  column "content" of relation "thingful_users" does not exist at character 31
+2019-10-22 11:56:47.921 MDT [27405] STATEMENT:  insert into "thingful_users" ("content", "date_created", "id", "image", "title", "user_id") values ($1, $2, $3, $4, $5, $6), ($7, $8, $9, $10, $11, $12), ($13, $14, $15, $16, $17, $18), ($19, $20, $21, $22, $23, $24)
+2019-10-22 11:56:48.229 MDT [27406] ERROR:  column "content" of relation "thingful_users" does not exist at character 31
+2019-10-22 11:56:48.229 MDT [27406] STATEMENT:  insert into "thingful_users" ("content", "date_created", "id", "image", "title", "user_id") values ($1, $2, $3, $4, $5, $6), ($7, $8, $9, $10, $11, $12), ($13, $14, $15, $16, $17, $18), ($19, $20, $21, $22, $23, $24)
+2019-10-22 11:56:48.554 MDT [27407] ERROR:  column "content" of relation "thingful_users" does not exist at character 31
+2019-10-22 11:56:48.554 MDT [27407] STATEMENT:  insert into "thingful_users" ("content", "date_created", "id", "image", "title", "user_id") values ($1, $2, $3, $4, $5, $6), ($7, $8, $9, $10, $11, $12), ($13, $14, $15, $16, $17, $18), ($19, $20, $21, $22, $23, $24)
+2019-10-22 11:56:49.215 MDT [27407] ERROR:  column "content" of relation "thingful_users" does not exist at character 31
+2019-10-22 11:56:49.215 MDT [27407] STATEMENT:  insert into "thingful_users" ("content", "date_created", "id", "image", "title", "user_id") values ($1, $2, $3, $4, $5, $6), ($7, $8, $9, $10, $11, $12), ($13, $14, $15, $16, $17, $18), ($19, $20, $21, $22, $23, $24)
+2019-10-22 11:56:49.863 MDT [27407] ERROR:  column "content" of relation "thingful_users" does not exist at character 31
+2019-10-22 11:56:49.863 MDT [27407] STATEMENT:  insert into "thingful_users" ("content", "date_created", "id", "image", "title", "user_id") values ($1, $2, $3, $4, $5, $6), ($7, $8, $9, $10, $11, $12), ($13, $14, $15, $16, $17, $18), ($19, $20, $21, $22, $23, $24)
+2019-10-22 11:58:06.928 MDT [27448] ERROR:  column "content" of relation "thingful_users" does not exist at character 31
+2019-10-22 11:58:06.928 MDT [27448] STATEMENT:  insert into "thingful_users" ("content", "date_created", "id", "image", "title", "user_id") values ($1, $2, $3, $4, $5, $6), ($7, $8, $9, $10, $11, $12), ($13, $14, $15, $16, $17, $18), ($19, $20, $21, $22, $23, $24)
+2019-10-22 11:58:07.235 MDT [27449] ERROR:  column "content" of relation "thingful_users" does not exist at character 31
+2019-10-22 11:58:07.235 MDT [27449] STATEMENT:  insert into "thingful_users" ("content", "date_created", "id", "image", "title", "user_id") values ($1, $2, $3, $4, $5, $6), ($7, $8, $9, $10, $11, $12), ($13, $14, $15, $16, $17, $18), ($19, $20, $21, $22, $23, $24)
+2019-10-22 11:58:07.561 MDT [27450] ERROR:  column "content" of relation "thingful_users" does not exist at character 31
+2019-10-22 11:58:07.561 MDT [27450] STATEMENT:  insert into "thingful_users" ("content", "date_created", "id", "image", "title", "user_id") values ($1, $2, $3, $4, $5, $6), ($7, $8, $9, $10, $11, $12), ($13, $14, $15, $16, $17, $18), ($19, $20, $21, $22, $23, $24)
+2019-10-22 11:58:08.220 MDT [27450] ERROR:  column "content" of relation "thingful_users" does not exist at character 31
+2019-10-22 11:58:08.220 MDT [27450] STATEMENT:  insert into "thingful_users" ("content", "date_created", "id", "image", "title", "user_id") values ($1, $2, $3, $4, $5, $6), ($7, $8, $9, $10, $11, $12), ($13, $14, $15, $16, $17, $18), ($19, $20, $21, $22, $23, $24)
+2019-10-22 11:58:08.867 MDT [27450] ERROR:  column "content" of relation "thingful_users" does not exist at character 31
+2019-10-22 11:58:08.867 MDT [27450] STATEMENT:  insert into "thingful_users" ("content", "date_created", "id", "image", "title", "user_id") values ($1, $2, $3, $4, $5, $6), ($7, $8, $9, $10, $11, $12), ($13, $14, $15, $16, $17, $18), ($19, $20, $21, $22, $23, $24)
+2019-10-22 12:05:24.171 MDT [27643] ERROR:  unterminated quoted string at or near "', $1)" at character 38
+2019-10-22 12:05:24.171 MDT [27643] STATEMENT:  SELECT setval(thingful_reviews_id_seq', $1)
+2019-10-22 12:05:24.351 MDT [27646] ERROR:  unterminated quoted string at or near "', $1)" at character 38
+2019-10-22 12:05:24.351 MDT [27646] STATEMENT:  SELECT setval(thingful_reviews_id_seq', $1)
+2019-10-22 12:05:24.416 MDT [27646] ERROR:  unterminated quoted string at or near "', $1)" at character 38
+2019-10-22 12:05:24.416 MDT [27646] STATEMENT:  SELECT setval(thingful_reviews_id_seq', $1)
+2019-10-22 12:05:24.472 MDT [27646] ERROR:  unterminated quoted string at or near "', $1)" at character 38
+2019-10-22 12:05:24.472 MDT [27646] STATEMENT:  SELECT setval(thingful_reviews_id_seq', $1)
+2019-10-22 12:19:41.810 MDT [27960] LOG:  unexpected EOF on client connection with an open transaction
